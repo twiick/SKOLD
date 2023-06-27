@@ -1,0 +1,291 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Manrope:wght@300;400&family=Roboto+Mono&display=swap');
+    :root{
+        --white: #FFFFFF;
+        --white-2: #f8f8f8;
+        --yellow: #ebfb48;
+        --black: #000000;
+        --black-2: #242424;
+        --inter: 'Inter', sans-serif;
+        --manrope: 'Manrope', sans-serif;
+        --roboto: 'Roboto Mono', monospace;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Manrope', sans-serif;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .border-t{
+        border-top: solid 1px var(--black);
+    }
+    .border-r{
+        border-right: solid 1px var(--black);
+    }
+    .border-l{
+        border-left: solid 1px var(--black);
+    }
+    .border-b{
+        border-bottom: solid 1px var(--black);
+    }
+    .button{
+        height: 61px;
+        padding: 0 32px;
+        display: flex;
+        align-items: center;
+        font-family: var(--roboto);
+        font-size: 13px;
+        font-weight: 400;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    a{
+        position: relative;
+    }
+    a div.underline{
+        background: var(--black-2);
+        width: 0;
+        height: 1px;
+        position: absolute;
+        bottom: -5px;
+        transition: .4s;
+    }
+    a div.underline_v2{
+        bottom: 18px;
+    }
+    a:hover div.underline{
+        width: 100%;
+        transition: .4s;
+    }
+    .button-type-1{
+        transition: .2s;
+    }
+    .button-type-1:hover{
+        background: var(--white-2);
+        border-left: solid 1px var(--white-2);
+        transition: .2s;
+    }
+    .button-type-2{
+        background: var(--black-2);
+        color: var(--white);
+    }
+    .button-type-2:hover{
+        background: var(--yellow);
+        color: var(--black-2);
+    }
+    h2{
+        margin-bottom: 20px;
+        font-size: 70px;
+        font-weight: 400;
+        line-height: 110%;
+    }
+    p{
+        font-family: var(--manrope);
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 160%;
+    }
+    .w30{
+        width: 30%;
+    }
+    .w50{
+        width: 50%;
+    }
+    .w70{
+        width: 70%;
+    }
+    .banner{
+        height: 36px;
+        background: var(--yellow);
+        position: relative;
+    }
+    .contenido-banner{
+        width: 100%;
+        white-space: nowrap;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        animation: desplazamiento 20s linear infinite;
+    }
+    .contenido-banner span{
+        overflow: hidden;
+        font-family: var(--roboto);
+        font-size: 13px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    header{
+        display: flex;
+        position: relative;
+    }
+    .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo img{
+        padding: 0 32px;
+    }
+    .nav-container{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .navbar{
+        display: block;
+    }
+    .navbar ul{
+        display: flex;
+        list-style: none;
+        gap: 20px;
+    }
+    .navbar ul li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar ul li a{
+        height: 61px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        color: var(--black-2);
+        font-family: var(--roboto);
+        font-size: 13px;
+        font-weight: 400;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    .header-buttons{
+        display: flex;
+    }
+    .create-brands{
+        display: flex;
+    }
+    .create-brands div img{
+        width: 100%;
+        height: 880px;
+        object-fit: cover;
+    }
+    .create-brands div.brand-content{
+        height: 880px;
+        display: flex;
+        flex-direction: column;
+    }
+    .create-brands div .content{
+        width: 100%;
+        height: 830px;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .create-brands div .content img{
+        width: 80px;
+        height: auto;
+    }
+    .create-brands div .info{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+    }
+    .create-brands div .info p{
+        padding: 0 20px;
+        font-size: 13px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    .sub-menu-button{
+        margin-right: 20px;
+    }
+    .sub-menu-button:hover .sub-menu{
+        display: flex;
+    }
+    .sub-menu{
+        background: var(--white-2);
+        width: 100vw;
+        display: none;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: translateY(100%);
+    }
+    .sub-menu img{
+        width: 25%;
+        object-fit: cover;
+    }
+    .sub-menu-items{
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .sub-menu-list{
+        padding: 40px;
+        display: flex;
+    }
+    .sub-menu-list ul{
+        width: calc(100% / 3);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .sub-menu-list ul li p{
+        margin-bottom: 32px;
+        font-family: var(--roboto);
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+    .sub-menu-list ul li a{
+        height: auto;
+        margin-bottom: 16px;
+        padding: 0;
+        font-family: var(--roboto);
+        font-size: 13px;
+    }
+    .sub-menu-list ul a.button-type-3{
+        background: var(--yellow);
+        height: auto;
+        margin-top: 20px;
+        padding: 12px;
+        border: solid 1px var(--black);
+    }
+    .credits{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    .madein{
+        display: flex;
+        font-size: 15px;
+    }
+    .madein p{
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+    }
+    .credits .madein p a{
+        margin-left: 5px;
+        padding: 0;
+        text-decoration: underline;
+    }
+    .social{
+        display: flex;
+        font-size: 15px;
+        gap: 20px;
+    }
+    /* Animación de desplazamiento */
+    @keyframes desplazamiento {
+      0% {
+        left: 100%;
+        animation-duration: 750ms;
+      }
+      100% {
+        left: -100%;
+        animation-duration: 750ms;
+      }
+    }
